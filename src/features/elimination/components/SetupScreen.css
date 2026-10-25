@@ -1,0 +1,7 @@
+.setup-background { position: fixed; inset: 0; overflow: hidden; pointer-events: none; z-index: -1; }
+.setup-decoration { position: absolute; display: grid; place-items: center; aspect-ratio: 5 / 8; border: 1px solid currentColor; border-radius: 7px; background: currentColor; opacity: .72; box-shadow: 0 6px 18px #1e293b12; }
+.setup-decoration::before { content: ''; position: absolute; inset: 5px; border: 1px solid var(--surface-light); border-radius: 3px; }
+.setup-decoration span { color: var(--surface-light); font-size: 1.4rem; }
+.decoration-blue { color: #90b4ec; }
+.decoration-red { color: #e8a0a8; }
+.decoration-gray { color: #a1a9b5; }

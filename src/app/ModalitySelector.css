@@ -1,0 +1,5 @@
+.modality-selector { position: absolute; z-index: 3; top: 1rem; right: 1rem; display: flex; align-items: center; gap: .8rem; }
+.modality-selector > span { font-size: .65rem; letter-spacing: .14em; font-weight: 700; color: #ecf3ff; padding: .5rem .8rem; border-radius: 24px; background: #172236; }
+.modality-selector button { border-radius: 50%; width: 48px; height: 48px; padding: 0; font-size: 1.6rem; color: #ecf3ff; }
+.modality-transition { position: relative; min-height: 100svh; }
+.modality-transition > .setup-screen { padding-top: 6rem; }

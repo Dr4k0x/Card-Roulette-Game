@@ -1,0 +1,54 @@
+.surprise-setup { --surface-darker: #fff; --text-light: #172033; --text-muted: #546176; --border-muted: #ccd3df; --blue-soft: #2258bd; --red-soft: #b82039; background: #0e1118; color: var(--text-light); color-scheme: light; padding-top: 6rem; }
+.surprise-setup .panel { background: #f4f6fa; box-shadow: 0 24px 100px #0008; }
+.surprise-setup button { background: #e6ebf4; }
+.surprise-setup button:hover:not(:disabled) { background: #d8e4f8; }
+.surprise-setup .start-button { background: var(--blue-primary); color: white; }
+.surprise-setup button:disabled { background: #e1e5ec; color: #697386; }
+.surprise-setup .mode-selector button[aria-pressed="true"] { background: #dce7fc; }
+.surprise-drafts { display: grid; gap: 1rem; padding: .25rem; margin: 0; list-style: none; max-height: 48dvh; overflow-y: auto; scrollbar-width: thin; }
+.surprise-drafts li { border: 1px solid var(--border-muted); border-radius: 12px; padding: .8rem; }
+.surprise-draft-heading { display: flex; align-items: center; gap: .75rem; margin-bottom: .8rem; }
+.surprise-draft-heading strong { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.surprise-draft-heading .image-preview-button { width: 64px; flex: 0 0 64px; }
+.surprise-drafts label { font-size: .8rem; }
+.surprise-drafts textarea { min-height: 5rem; }
+.surprise-board { display: flex; flex-direction: column; gap: 2rem; padding: 3rem clamp(1rem, 5vw, 5rem); background: radial-gradient(ellipse at 15% 10%, #1b3e6c55, transparent 50%), radial-gradient(ellipse at 90% 80%, #6d253533, transparent 50%), #0c1019; }
+.surprise-board > header, .surprise-board > footer { text-align: center; width: min(100%, 1020px); margin-inline: auto; }
+.surprise-counter { margin-top: 1rem; color: #a9c6ff; }
+.surprise-grid { --columns: 4; display: grid; grid-template-columns: repeat(var(--columns), minmax(0, 1fr)); gap: clamp(.75rem, 2.5vw, 2rem); width: min(100%, 1020px); margin-inline: auto; }
+.surprise-tile { position: relative; padding: 0; min-width: 0; aspect-ratio: 5 / 8; background: transparent; border: 0; border-radius: 16px; perspective: 1200px; }
+.surprise-tile:hover:not(:disabled) { background: transparent; filter: brightness(1.12); }
+.surprise-card-content { display: flex; flex-direction: column; position: relative; width: 100%; height: 100%; border-radius: 16px; border: 1px solid #a5bbdf80; padding: 1rem; background: linear-gradient(145deg, #162236, #070c16); overflow: hidden; box-shadow: 0 12px 30px #0005; }
+.surprise-card-content::after { content: ''; position: absolute; inset: 6px; border: 1px solid #a8bed050; border-radius: 10px; pointer-events: none; }
+.surprise-back { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; flex: 1; background: repeating-linear-gradient(45deg, transparent 0 16px, #ffffff03 16px 17px); }
+.surprise-sigil { font-size: clamp(2rem, 6vw, 5rem); background: var(--rgb-gradient); color: transparent; background-clip: text; filter: drop-shadow(0 0 18px #6b91ff70); }
+.surprise-back-caption { font-size: clamp(.55rem, 1.2vw, .85rem); letter-spacing: .18em; color: #a6b9d7; }
+.surprise-back-copy { display: flex; flex-direction: column; align-items: center; gap: .5rem; width: 100%; min-width: 0; text-align: center; }
+.surprise-back-hint { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; max-width: 100%; overflow: hidden; overflow-wrap: anywhere; white-space: pre-wrap; font-size: clamp(.65rem, 1.1vw, .8rem); font-weight: 400; line-height: 1.5; letter-spacing: .06em; color: #a6b9d7; }
+.surprise-number { position: absolute; left: 1rem; top: 1rem; font-size: .7rem; font-weight: 700; color: #a7c0ea; background: #0c1523d9; padding: .2rem .4rem; border-radius: 5px; }
+.is-revealed { background: #f4f6fb; color: #172033; }
+.surprise-main-content { display: grid; place-items: center; flex: 1; min-height: 0; min-width: 0; overflow: hidden; }
+.surprise-main-content > strong { font-size: clamp(1rem, 2.3vw, 2rem); overflow-wrap: anywhere; white-space: pre-wrap; }
+.surprise-main-content .image-card { height: 100%; width: 100%; aspect-ratio: auto; }
+.is-revealed .surprise-main-content { padding-top: 1rem; }
+.surprise-dialog { --expanded-height: min(78dvh, calc(100dvh - 9rem), calc((100vw - 3rem) * 1.6)); width: calc(var(--expanded-height) * .625 + 1.5rem); max-width: calc(100vw - 1rem); max-height: calc(100dvh - 1rem); padding: .75rem; border: 0; background: transparent; color: #f7f7f8; overflow: visible; text-align: center; perspective: 1600px; }
+.surprise-dialog::backdrop { background: #03070de8; backdrop-filter: blur(9px); }
+.surprise-expanded { height: var(--expanded-height); width: 100%; }
+.surprise-flip { position: relative; width: 100%; height: 100%; transform-style: preserve-3d; border-radius: 16px; box-shadow: 0 0 calc(var(--charge) * 60px) #729dff; }
+.surprise-face { position: absolute; inset: 0; backface-visibility: hidden; border-radius: inherit; }
+.surprise-face-front { transform: rotateY(180deg); }
+.surprise-hold { height: 100%; width: 100%; padding: 0; border: 0; border-radius: inherit; touch-action: none; user-select: none; }
+.surprise-hold .surprise-card-content { filter: brightness(calc(1 + var(--charge) * .65)); border-color: #8cafff; }
+.surprise-hold:disabled { background: transparent; }
+.is-expanded .surprise-main-content > strong { font-size: clamp(1.3rem, 3vw, 2.8rem); }
+.is-expanded .surprise-back-hint { font-size: clamp(.8rem, 1.6dvh, 1rem); }
+.surprise-charge-status, .surprise-discovered { margin-top: .75rem; }
+.surprise-charge-status p { font-size: .8rem; color: #b6c7e2; }
+.surprise-charge-status progress { display: block; width: 100%; height: 6px; margin-top: .5rem; accent-color: #8bb4ff; }
+.surprise-close { margin-top: .75rem; }
+.surprise-board footer .start-button { width: min(100%, 300px); margin-top: 1rem; }
+.just-revealed { animation: surprise-flash .7s ease-out; }
+@keyframes surprise-flash { from { filter: brightness(1.6); } to { filter: brightness(1); } }
+@media (max-width: 760px) { .surprise-grid { --columns: 3; } }
+@media (max-width: 540px) { .surprise-grid { --columns: 2; } .surprise-card-content { padding: .75rem; } .surprise-number { top: .7rem; left: .7rem; } }
+@media (max-width: 350px) { .surprise-grid { --columns: 1; width: min(100%, 240px); } }

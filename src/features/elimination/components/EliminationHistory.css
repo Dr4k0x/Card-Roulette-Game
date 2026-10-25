@@ -1,0 +1,21 @@
+.elimination-history { min-width: 0; align-self: center; padding: 1rem; border: 1px solid var(--border-muted); border-radius: var(--radius-panel); background: #11151dc9; text-align: left; }
+.elimination-history h2 { justify-content: space-between; color: var(--text-muted); font-size: .7rem; text-transform: uppercase; letter-spacing: .1em; }
+.elimination-history h2 span { color: var(--red-soft); }
+.history-empty { font-size: .8rem; }
+.elimination-history ol { display: grid; grid-template-columns: 1fr; gap: 0; max-height: 48svh; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: var(--red-primary) transparent; margin: 0; padding: .2rem; list-style: none; }
+.history-row { display: grid; grid-template-columns: 1.8rem minmax(0, 1fr); align-items: baseline; gap: .5rem; padding: .6rem .15rem; border-bottom: 1px solid #ffffff0c; color: var(--text-light); font-size: .9rem; line-height: 1.35; overflow-wrap: anywhere; }
+.history-row:last-child { border-bottom: 0; }
+.history-number { color: var(--red-soft); font-size: .7rem; font-variant-numeric: tabular-nums; }
+.history-summary { width: 100%; }
+.history-row { position: relative; align-items: center; }
+.history-row::before { content: ''; position: absolute; left: .85rem; top: 65%; bottom: -25%; width: 1px; background: #d4b98045; }
+.history-row:last-child::before { display: none; }
+.history-number { display: grid; place-items: center; align-self: start; margin-top: .35rem; min-height: 1.5rem; border: 1px solid #d4b98040; border-radius: 50%; background: #151923; z-index: 1; }
+.history-image-row { grid-template-columns: 1.8rem 48px minmax(0, 1fr); gap: .65rem; padding-block: .7rem; }
+.history-image-row .image-card-base > span { font-size: .65rem; }
+@media (max-width: 600px) { .board-layout .history-image-row { grid-template-columns: 1.3rem minmax(0, 1fr); } .board-layout .history-image-row > span:last-child { grid-column: 2; } .board-layout .history-image-row .image-card { width: 46px; } .board-layout .history-row::before { left: .65rem; } }
+@media (max-width: 600px) {
+  .board-layout .elimination-history { padding: .65rem; }
+  .board-layout .history-row { grid-template-columns: 1.3rem minmax(0, 1fr); gap: .2rem; font-size: .75rem; }
+  .board-layout .elimination-history h2 { font-size: .6rem; letter-spacing: .04em; gap: .25rem; }
+}

@@ -1,0 +1,7 @@
+.game-experience { position: relative; isolation: isolate; min-height: 100svh; }
+.stage-background { position: absolute; inset: 0; z-index: -1; overflow: hidden; background: var(--surface-darker); pointer-events: none; }
+.stage-light { position: absolute; inset: 0; }
+.stage-midnight { background: var(--ambient-midnight); }
+.stage-charged { background: var(--ambient-charged); }
+.stage-tension { background: var(--ambient-tension); }
+.stage-final { background: var(--ambient-final); }
